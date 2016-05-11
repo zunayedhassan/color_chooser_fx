@@ -14,6 +14,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
+import javafx.scene.Cursor;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.Spinner;
@@ -207,6 +208,7 @@ public class ColorChooser extends BorderPane {
                 @Override
                 public void handle(MouseEvent event) {
                     colorRect.setStroke(Color.BLACK);
+                    setCursor(Cursor.HAND);
                 }
             });
             
@@ -214,6 +216,7 @@ public class ColorChooser extends BorderPane {
                 @Override
                 public void handle(MouseEvent event) {
                     colorRect.setStroke(Color.LIGHTGRAY);
+                    setCursor(Cursor.DEFAULT);
                 }
             });
             
